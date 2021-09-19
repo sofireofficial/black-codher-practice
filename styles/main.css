@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(245, 245, 136);
+    font-family: lobster;
+    text-align: center;
+    font-size: 1.4em;
+    height: 100vh; /*good idea when has a child */
+    margin: 0; /*good idea when has a child */
+    padding: 0; /*good idea when has a child */
+}
+
+.box1 {
+    background-color: rgba(1, 13, 37, 0.842);
+    margin: 0; /* don't forget margin-top & margin-bottom was 20px */
+    padding: 100px;
+    color: rgb(80, 189, 240);
+}
+
+.box2 {
+    background-color: rgb(14, 126, 179);
+    margin: 0;
+    padding: 100px;
+    color: rgba(1, 13, 37, 0.842);
+}
+
+#ContainerLeft {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+@media screen and (min-width: 800px) {
+    main {
+        display: flex;
+        align-items: center;
+        height: 100%; /* can this be removed? */
+    }
+
+    #ContainerLeft {
+        background-color: rgb(245, 245, 136);
+        width: 50vw;
+        overflow-x: hidden;        
+        height: 100vh;
+    }
+
+    #ContainerRight {
+        background-color: darkblue;
+        overflow-x: hidden; /* refers to horizontal overflow of an element */
+        overflow-y: auto; /* refers to vertical overflow of an element. Auto means, scroll bar will be added whenever there is a need. Needs a height! */
+        height: 100vh;
+        width: 50vw; /* taken 50% of its parent */          
+    }
+
+    body {
+        position: relative;
+    }
+
+    /* return at later date, to align footer under #ContainerRight. Made white for testing!...
+    footer {
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 70vw;
+    } */
+      
+}
+
+.scroll-col::-webkit-scrollbar {
+    display: none;
+  } /*chrome browswer */
+  
+  .scroll-col {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  } /*all other browsers */
