@@ -22,18 +22,52 @@ console.log(forConsole2);
 
 const menu = ['pizzas', 'hotdogs', 'burgers'];
 const num = [1, 2, 3, 4];
+console.log(menu[0]);
 
 for (let i = 0; i < menu.length; i++) {
-        for (let j = 0; j < num.length; j++)
-    console.log(menu + num);
+        for (let j = 0; j < num.length; j++) {
+            console.log(i);
+            // console.log(menu[i]);
+            
+        }    
 };
 
 // practicing map (made up task)
 
 const sophiasMeals = [
-    {fridayLunch: 'Sandwich', fridayDinner: 'Fish n chips'},
-    {saturdayLunch: 'Salad', saturdayDinner: 'Soup'},
-    {sundayLunch: 'Late breakfast', sundayDinner: 'Rice n peas'}
+    {Lunch: 'Sandwich', Dinner: 'Fish n chips'},
+    {Lunch: 'Salad', Dinner: 'Soup'},
+    {Lunch: 'Late breakfast', Dinner: 'Rice n peas'}
 ]
 
-sophiasMeals.map((food) => console.log(food.fridayDinner));
+console.log(sophiasMeals.map((food) => (food.Dinner)));
+
+sophiasMeals.map((food) => (console.log(food.Dinner)));
+
+console.log(sophiasMeals.map((food) => {return {Lunch: food.Lunch.toUpperCase(), Dinner: food.Dinner.toUpperCase()}}));
+
+const x = (parameterHer) => parameterHer.toUpperCase();
+console.log(x('Hello'));
+
+
+
+// Practicing appending (Andy helped!)
+
+                        // Remember...
+                        // console.log(document.body.textContent="This replaces all children in element"); 
+                        // console.log(document.body.textContent=sophiasMeals); 
+
+                        // console.log(document.getElementById('ContainerRight'));
+                        // console.log(document.getElementById('DoesNotExist'));
+                        // document.getElementById('ContainerRight').textContent='hiya';
+
+const divContainer = document.querySelector('#ContainerLeft');                    
+                        // console.log(divContainer);
+const newParagraph = document.createElement('p');
+newParagraph.textContent='new paragraph content';
+                        // console.log(newParagraph);
+                        // paragraph exists, but we want to add it to the DOM
+
+divContainer.append(newParagraph);
+divContainer.append('anotherNewParagraph');
+document.querySelector('#ContainerLeft').append('AndAnotherNewParagraph');

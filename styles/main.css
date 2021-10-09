@@ -27,6 +27,11 @@ body {
     padding-right: 1.5em;
 }
 
+.smLogo img {
+    max-width: 10px;
+    max-height: 10px;
+}
+
 @media screen and (min-width: 800px) {
     main {
         display: flex;
