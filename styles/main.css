@@ -27,9 +27,14 @@ body {
     padding-right: 1.5em;
 }
 
-.smLogo img {
-    max-width: 10px;
-    max-height: 10px;
+img.smLogo {
+    max-width: 1.5em;
+    max-height: 1.5em;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
 }
 
 @media screen and (min-width: 800px) {
